@@ -1,11 +1,16 @@
+import { Route, Routes } from "react-router-dom";
+import useTitle from "./hooks/useTitle";
+import { Home } from "./pages";
 
 function App() {
-
+  useTitle();
   return (
     <>
-      <h1>Hallo</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
